@@ -3,3 +3,11 @@ header {
   max-width: 100%;
   height: 300px;
 }
+
+.header__logo {
+  margin: 128px;
+  color: rgb(241, 189, 94);
+  font-size: 10rem;
+  font-weight: 500;
+  width: fit-content;
+}
