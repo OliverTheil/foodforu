@@ -1,42 +1,14 @@
 main {
-  height: 1000px;
+  height: fit-content;
   width: 100vw;
   max-width: 100%;
   display: flex;
-}
-
-.landingpage {
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-}
-
-.landingpage__heading {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.landingpage__logo {
-  margin: 32px 0 0 0;
-  color: aquamarine;
-  font-size: 10rem;
-  font-weight: 500;
-  width: fit-content;
-}
-
-.landingpage__welcome {
-  font-size: 10rem;
-  font-weight: 500;
 }
 
 .body {
-  margin-left: 128px;
-  margin-right: 428px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  height: fit-content;
 }
 
 .cart {

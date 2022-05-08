@@ -1,0 +1,100 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__headContainer {
+  margin: 64px 64px 16px 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 16px;
+  height: 128px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.fav {
+  background-image: url("/assets/img/foodBoxImg.jpg");
+}
+
+.pizza {
+  background-image: url("/assets/img/pizza.jpg");
+}
+
+.burger {
+  background-image: url("/assets/img/burger.jpg");
+}
+
+.salat {
+  background-image: url("/assets/img/salat.jpg");
+}
+
+.drinks {
+  background-image: url("/assets/img/drinks.jpg");
+}
+
+.menu__headContainer__heading {
+  font-size: 3rem;
+  font-weight: 500;
+  min-width: 160px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 16px 32px;
+  background-color: rgb(200, 200, 200);
+}
+
+.menu__foodBox {
+  margin: 64px 64px 0 64px;
+  border-radius: 16px;
+  height: fit-content;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu__foodName {
+  font-size: 3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 32px;
+  border-right: 1px solid grey;
+  background-color: rgb(200, 200, 200);
+}
+
+.menu__description {
+  margin: 16px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.menu__price {
+  font-size: 3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 32px;
+  border-left: 1px solid grey;
+  background-color: rgb(200, 200, 200);
+}
+
+.menu__add {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid grey;
+
+  &:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+  }
+}

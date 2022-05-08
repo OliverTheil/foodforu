@@ -1,0 +1,50 @@
+.landingpage {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.landingpage__heading {
+  margin-left: 64px;
+  margin-top: 256px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.landingpage__logo {
+  font-family: "Playfair Display";
+  font-weight: 800;
+  color: greenyellow;
+  font-size: 10rem;
+  width: fit-content;
+}
+
+.landingpage__img {
+  margin-top: 256px;
+  margin-right: 64px;
+  border-radius: 48% 52% 76% 24% / 30% 25% 75% 70%;
+  width: 600px;
+  height: 450px;
+}
+
+.landingpage__welcome {
+  font-family: "Playfair Display";
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+.landingpage__text {
+  margin-top: 64px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.landingpage__menu__button {
+  margin-top: 32px;
+}

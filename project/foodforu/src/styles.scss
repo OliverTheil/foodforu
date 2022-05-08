@@ -2,3 +2,56 @@ body {
   margin: 0;
   background-color: rgb(200, 200, 200);
 }
+
+button {
+  font-size: 2rem;
+  padding: 8px 32px;
+  border-radius: 16px;
+  border: 2px solid greenyellow;
+  background-color: transparent;
+
+  &:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+  }
+}
+
+.font--green {
+  font-family: "Playfair Display";
+  font-size: 10rem;
+  font-weight: 700;
+  color: greenyellow;
+}
+
+.heading {
+  font-family: "Playfair Display";
+  font-size: 10rem;
+  font-weight: 700;
+  margin-left: 64px;
+  margin-top: 64px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.text {
+  margin: 64px !important;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(200, 200, 200);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(172, 255, 47, 0.661);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
