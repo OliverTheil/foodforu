@@ -3,13 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-dataprotection',
   templateUrl: './dataprotection.component.html',
-  styleUrls: ['./dataprotection.component.scss']
+  styleUrls: ['./dataprotection.component.scss'],
 })
 export class DataprotectionComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
-
 }

@@ -1,1 +1,99 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
 
+.filler {
+  height: 128px;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.cart__foodBox {
+  margin: 64px 64px 0 64px;
+  border-radius: 16px;
+  height: fit-content;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    margin: 32px 16px 16px 16px;
+  }
+}
+
+.cart__number {
+  font-size: 2.6rem;
+  font-weight: 400;
+  padding: 16px;
+}
+
+.cart__foodName {
+  font-size: 3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 32px;
+  border-right: 1px solid grey;
+  background-color: rgb(200, 200, 200);
+  @media (max-width: 900px) {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid grey;
+  }
+}
+
+.cart__description {
+  margin: 16px;
+  font-size: 2rem;
+  font-weight: 300;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+.cart__price {
+  font-size: 3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 32px;
+  border-left: 1px solid grey;
+  background-color: rgb(200, 200, 200);
+  @media (max-width: 900px) {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-top: 1px solid grey;
+  }
+}
+
+.cart__minusAdd {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid grey;
+
+  &:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+  }
+}
+
+.minusPlus__container {
+  display: flex;
+}

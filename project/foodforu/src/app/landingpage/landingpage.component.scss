@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: 1160px) {
+    height: fit-content;
+  }
 }
 
 .landingpage__heading {
@@ -15,6 +18,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 600px) {
+    margin-top: 128px;
+    margin-left: 16px;
+  }
 }
 
 .landingpage__logo {
@@ -23,6 +31,10 @@
   color: greenyellow;
   font-size: 10rem;
   width: fit-content;
+
+  @media (max-width: 600px) {
+    font-size: 6rem;
+  }
 }
 
 .landingpage__img {
@@ -31,20 +43,43 @@
   border-radius: 48% 52% 76% 24% / 30% 25% 75% 70%;
   width: 600px;
   height: 450px;
+
+  @media (max-width: 1160px) {
+    opacity: 0.2;
+    z-index: -1;
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    margin: 0;
+    top: 100px;
+    right: 0;
+  }
 }
 
 .landingpage__welcome {
   font-family: "Playfair Display";
   font-size: 10rem;
   font-weight: 700;
+  @media (max-width: 1160px) {
+    font-size: 6rem;
+  }
 }
 
 .landingpage__text {
   margin-top: 64px;
   font-size: 2rem;
   font-weight: 300;
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+    margin-top: 32px;
+  }
 }
 
 .landingpage__menu__button {
   margin-top: 32px;
+}
+
+a {
+  text-decoration: none;
 }
