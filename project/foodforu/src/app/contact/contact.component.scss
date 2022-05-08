@@ -1,12 +1,28 @@
 .contact {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: fit-content;
   width: 100vw;
   max-width: 100%;
+  margin-bottom: 64px;
 }
 
 .margin {
   margin-left: 64px;
   margin-right: 64px;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin--top {
+  margin-top: 32px;
 }

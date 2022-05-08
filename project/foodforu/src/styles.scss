@@ -9,11 +9,30 @@ button {
   border-radius: 16px;
   border: 2px solid greenyellow;
   background-color: transparent;
+  max-width: 280px;
 
   &:hover {
     background-color: greenyellow;
     cursor: pointer;
   }
+}
+
+input {
+  background-color: rgb(200, 200, 200);
+  border: 2px solid grey;
+  border-radius: 16px;
+  padding: 16px 8px;
+  margin-left: 64px;
+  width: 260px;
+}
+
+textarea {
+  background-color: rgb(200, 200, 200);
+  border: 2px solid grey;
+  border-radius: 16px;
+  padding: 16px 8px;
+  margin-left: 64px;
+  max-width: 600px;
 }
 
 .font--green {
@@ -34,9 +53,10 @@ button {
 }
 
 .text {
-  margin: 64px !important;
+  margin: 64px 64px 0 64px !important;
   font-size: 2rem;
   font-weight: 300;
+  width: fit-content;
 }
 
 ::-webkit-scrollbar {

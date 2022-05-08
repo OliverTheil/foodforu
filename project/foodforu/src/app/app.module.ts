@@ -12,6 +12,8 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContactComponent } from './contact/contact.component';
     LandingpageComponent,
     AboutComponent,
     MenuComponent,
-    ContactComponent
+    ContactComponent,
+    ImprintComponent,
+    DataprotectionComponent
   ],
   imports: [
     BrowserModule,

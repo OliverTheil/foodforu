@@ -1,17 +1,35 @@
 <section class="contact">
   <span class="heading">Contact <b class="font--green">U</b>s</span>
   <section>
-    <form action="https://formsubmit.co/olivertheil@posteo.de" method="post">
+    <form
+      class="contact__form"
+      action="https://formsubmit.co/olivertheil@posteo.de"
+      method="post"
+    >
       <span class="text"> You liked my site? Write me a message! </span>
-      <input type="text" name="name" class="" placeholder="name" required />
-      <input type="text" name="email" class="" placeholder="email" required />
+      <div class="contact__container">
+        <input
+          type="text"
+          name="name"
+          class="margin--top"
+          placeholder="name"
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          class="margin--top"
+          placeholder="email"
+          required
+        />
+      </div>
       <textarea
         #message
         placeholder="message"
         name="message"
         cols="30"
         rows="4"
-        class=""
+        class="margin--top"
         required
       ></textarea>
       <input
@@ -19,18 +37,7 @@
         name="_next"
         value="https://oliver-theil.de/confirm"
       />
-      <button type="submit">Bestätigen</button>
+      <button class="margin--top margin" type="submit">Bestätigen</button>
     </form>
   </section>
-  <div>
-    <p class="text">
-      Oliver Theil<br />
-      Graf-von-Stauffenberg-Str. 6<br />
-      86343 K&ouml;nigsbrunn
-    </p>
-    <p class="text">
-      Telefon: 015120206370<br />
-      E-Mail: olivertheil@posteo.de
-    </p>
-  </div>
 </section>
