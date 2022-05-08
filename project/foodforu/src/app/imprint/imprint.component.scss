@@ -1,0 +1,16 @@
+.imprint {
+  margin-top: 128px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: fit-content;
+}
+
+.page {
+  height: 82vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

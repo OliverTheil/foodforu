@@ -1,11 +1,64 @@
-<header>
+<!-- <header>
   <nav>
-    <li>Home</li>
-    <li>About</li>
-    <li>Menu</li>
-    <li>Contact</li>
-    <li class="nav__basketIcon">
+    <li href=""><a href=""> Home</a></li>
+    <li href=""><a href="#about"> About</a></li>
+    <li href=""><a href="#menu"> Menu</a></li>
+    <li href=""><a href="#contact"> Contact</a></li>
+    <li routerLink="/cart" class="nav__basketIcon">
       <i class="fa-solid fa-bag-shopping fa-xl"></i>
     </li>
   </nav>
+</header> -->
+
+<button
+  (click)="openMenu()"
+  [class.navbar__button--turn]="iconHovered"
+  class="header__menu__button z--4"
+>
+  <i
+    [class.navbar__icon--effect]="iconHovered"
+    class="fa-solid fa-arrow-right-from-bracket fa-2x navbar__arrow"
+  ></i>
+</button>
+<header>
+  <nav class="navbar__desktop z--4">
+    <a href="#headpage">Home</a>
+    <a href="#aboutMe">Über mich</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projekte</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+  <nav [class.show]="iconHovered" class="navbar__mobile z--5 fixed">
+    <a (mouseover)="showText()" (click)="openMenu()" href="#headpage"
+      ><i class="fa-solid navbar__icon fa-house fa-3x"></i
+    ></a>
+    <a (mouseover)="showText()" (click)="openMenu()" href="#aboutMe"
+      ><i class="fa-solid navbar__icon fa-user fa-3x"></i
+    ></a>
+    <a (mouseover)="showText()" (click)="openMenu()" href="#skills"
+      ><i class="fa-solid navbar__icon fa-clipboard-list fa-3x"></i
+    ></a>
+    <a (mouseover)="showText()" (click)="openMenu()" href="#projects"
+      ><i class="fa-solid navbar__icon fa-boxes-stacked fa-3x"></i
+    ></a>
+    <a (mouseover)="showText()" (click)="openMenu()" href="#contact"
+      ><i class="fa-solid navbar__icon fa-address-card fa-3x"></i
+    ></a>
+    <a (mouseover)="showText()" (click)="openMenu()" href="#contact"
+      ><i class="fa-solid navbar__icon fa-square-caret-down fa-3x"></i
+    ></a>
+  </nav>
+  <div
+    [class.show]="activeText"
+    [class.navbar--change]="iconHovered"
+    id="mobileText"
+    class="navbar__mobile__text fixed z--4"
+  >
+    <a (click)="openMenu()" href="#headpage">Home</a>
+    <a (click)="openMenu()" href="#aboutMe">Über mich</a>
+    <a (click)="openMenu()" href="#skills">Skills</a>
+    <a (click)="openMenu()" href="#projects">Projekte</a>
+    <a (click)="openMenu()" href="#contact">Kontakt</a>
+    <a (click)="openMenu()" href="#contact">Links & Info</a>
+  </div>
 </header>

@@ -1,5 +1,17 @@
 .dataprotection {
-  margin-bottom: 60px;
+  margin: 128px 64px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: fit-content;
+}
+
+.page {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 h1 {

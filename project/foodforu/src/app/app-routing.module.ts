@@ -13,7 +13,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: BodyComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'landingpage', component: LandingpageComponent },
