@@ -5,6 +5,33 @@ main {
   display: flex;
 }
 
+.landingpage {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.landingpage__heading {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.landingpage__logo {
+  margin: 32px 0 0 0;
+  color: aquamarine;
+  font-size: 10rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.landingpage__welcome {
+  font-size: 10rem;
+  font-weight: 500;
+}
+
 .body {
   margin-left: 128px;
   margin-right: 428px;
