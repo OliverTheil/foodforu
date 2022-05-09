@@ -76,21 +76,26 @@
 }
 
 .menu__foodName {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.6rem;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px;
-  padding: 16px 32px;
+  min-width: 260px;
+  padding: 16px 16px;
   border-right: 1px solid grey;
   background-color: rgb(200, 200, 200);
   @media (max-width: 900px) {
+    text-align: center;
     width: 80%;
     padding-left: 0;
     padding-right: 0;
     border-right: none;
     border-bottom: 1px solid grey;
+  }
+  @media (max-width: 600px) {
+    font-size: 2.2;
+    min-width: 220px;
   }
 }
 
@@ -98,18 +103,16 @@
   margin: 16px;
   font-size: 2rem;
   font-weight: 300;
-  @media (max-width: 900px) {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .menu__price {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.6rem;
+  font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px;
+  min-width: 40px;
   padding: 16px 32px;
   border-left: 1px solid grey;
   background-color: rgb(200, 200, 200);
@@ -119,6 +122,19 @@
     padding-right: 0;
     border-left: none;
     border-top: 1px solid grey;
+  }
+}
+
+.menu__priceAdd__container {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: 900px) {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

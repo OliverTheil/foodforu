@@ -3,93 +3,85 @@
   <div class="menu__headContainer fav">
     <span class="menu__headContainer__heading">Our Favorites</span>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
+
+  <div *ngFor="let fav of items.favmeals" class="menu__foodBox">
+    <span class="menu__foodName"> {{ fav.name }} </span>
     <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
+      {{ fav.description }}
     </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
+    <div class="menu__priceAdd__container">
+      <span class="menu__price">{{ fav.price }}€</span>
+      <div class="menu__add">
+        <i class="fa-solid fa-plus fa-xl"></i>
+      </div>
     </div>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
-    <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
-    </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
-    </div>
-  </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
-    <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
-    </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
-    </div>
-  </div>
+
   <div class="menu__headContainer pizza">
     <span class="menu__headContainer__heading">Pizza</span>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
+
+  <div *ngFor="let pizza of items.pizza" class="menu__foodBox">
+    <span class="menu__foodName"> {{ pizza.name }} </span>
     <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
+      {{ pizza.description }}
     </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
+    <div class="menu__priceAdd__container">
+      <span class="menu__price">{{ pizza.price }}€</span>
+      <div class="menu__add">
+        <i class="fa-solid fa-plus fa-xl"></i>
+      </div>
     </div>
   </div>
+
   <div class="menu__headContainer burger">
     <span class="menu__headContainer__heading">Burger</span>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
+
+  <div *ngFor="let burger of items.burger" class="menu__foodBox">
+    <span class="menu__foodName"> {{ burger.name }} </span>
     <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
+      {{ burger.description }}
     </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
+    <div class="menu__priceAdd__container">
+      <span class="menu__price">{{ burger.price }}€</span>
+      <div class="menu__add">
+        <i class="fa-solid fa-plus fa-xl"></i>
+      </div>
     </div>
   </div>
+
   <div class="menu__headContainer salat">
     <span class="menu__headContainer__heading">Salat</span>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
+
+  <div *ngFor="let salat of items.salat" class="menu__foodBox">
+    <span class="menu__foodName"> {{ salat.name }} </span>
     <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
+      {{ salat.description }}
     </span>
-    <span class="menu__price">10,00</span>
-    <div class="menu__add">
-      <i class="fa-solid fa-plus fa-xl"></i>
+    <div class="menu__priceAdd__container">
+      <span class="menu__price">{{ salat.price }}€</span>
+      <div class="menu__add">
+        <i class="fa-solid fa-plus fa-xl"></i>
+      </div>
     </div>
   </div>
+
   <div class="menu__headContainer drinks">
     <span class="menu__headContainer__heading">Drinks</span>
   </div>
-  <div class="menu__foodBox">
-    <span class="menu__foodName"> Pizza </span>
-    <span class="menu__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-      officiis id non libero! Quibusdam ea
-    </span>
-    <span class="menu__price">10,00</span>
+</section>
+
+<div *ngFor="let drinks of items.drinks" class="menu__foodBox">
+  <span class="menu__foodName"> {{ drinks.name }} </span>
+  <span class="menu__description">
+    {{ drinks.description }}
+  </span>
+  <div class="menu__priceAdd__container">
+    <span class="menu__price">{{ drinks.price }}€</span>
     <div class="menu__add">
       <i class="fa-solid fa-plus fa-xl"></i>
     </div>
   </div>
-</section>
+</div>
