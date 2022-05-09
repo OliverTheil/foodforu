@@ -7,8 +7,6 @@ import { MenuComponent } from './menu/menu.component';
   providedIn: 'root',
 })
 export class CartService {
-  cart = [];
-
   constructor() {}
 
   errorMessage(error: string) {

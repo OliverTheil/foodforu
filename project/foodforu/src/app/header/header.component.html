@@ -1,5 +1,5 @@
 <button
-  (click)="openMenu()"
+  routerLink="/cart"
   [class.navbar__button--turn]="iconHovered"
   class="z--4 header__basket"
 >
@@ -7,6 +7,9 @@
     [class.navbar__icon--effect]="iconHovered"
     class="fa-solid fa-bag-shopping fa-xl"
   ></i>
+  <div *ngIf="items.cart.length > 0" class="amountCircle">
+    {{ items.cart.length }}
+  </div>
 </button>
 <button
   (click)="openMenu()"
@@ -26,6 +29,9 @@
     <a href="#contact">Contact</a>
     <li routerLink="/cart" class="nav__basketIcon">
       <i class="fa-solid fa-bag-shopping fa-xl"></i>
+      <div *ngIf="items.cart.length > 0" class="amountCircle">
+        {{ items.cart.length }}
+      </div>
     </li>
   </nav>
   <nav [class.show]="iconHovered" class="navbar__mobile z--5 fixed">

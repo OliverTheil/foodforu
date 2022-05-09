@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Items } from '../models/items.class';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  items = new Items();
   iconHovered = false;
   activeText = false;
   constructor() {}
