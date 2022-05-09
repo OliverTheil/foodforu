@@ -1,16 +1,19 @@
 <section id="cart" class="cart">
   <div class="filler"></div>
-  <div *ngFor="let item of items.cart" class="cart__foodBox">
+  <div
+    *ngFor="let item of this.items.cart; let i = index"
+    class="cart__foodBox"
+  >
     <div class="cart__amountAndName__container">
-      <span class="cart__number"> 100x</span>
-      <span class="cart__foodName"></span>
+      <span class="cart__number">{{ this.items.cart[i].amount }}x</span>
+      <span class="cart__foodName">{{ this.items.cart[i].name }}</span>
     </div>
     <div class="minusPlus__container">
-      <span class="cart__price">10,00</span>
-      <div class="cart__minusAdd">
+      <span class="cart__price">{{ this.items.cart[i].price }}</span>
+      <div (click)="minus(i)" class="cart__minusAdd">
         <i class="fa-solid fa-minus fa-xl"></i>
       </div>
-      <div class="cart__minusAdd">
+      <div (click)="plus(i)" class="cart__minusAdd">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     </div>

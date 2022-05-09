@@ -16,6 +16,18 @@ export class CartComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+  plus(i: number) {
+    this.items.cart[i].amount += 1;
+  }
+
+  minus(i: number) {
+    if (this.items.cart[i].amount > 1) {
+      this.items.cart[i].amount -= 1;
+    } else {
+      console.log(this.items.cart[i]);
+    }
+  }
+
   orderFood() {
     this.cartService.errorMessage('Sorry, but there is no food :(');
   }

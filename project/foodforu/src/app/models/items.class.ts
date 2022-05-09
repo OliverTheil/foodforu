@@ -164,12 +164,5 @@ export class Items {
     },
   ];
 
-  cart = [
-    {
-      name: 'Fried Zucchini',
-      description: 'Served with garlic yogurt dipping sauce.',
-      price: 11.9,
-      amount: 0,
-    },
-  ];
+  cart: any = [];
 }

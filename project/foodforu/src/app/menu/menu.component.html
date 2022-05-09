@@ -11,7 +11,7 @@
     </span>
     <div class="menu__priceAdd__container">
       <span class="menu__price">{{ fav.price }}€</span>
-      <div class="menu__add">
+      <div (click)="add(fav)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     </div>
@@ -28,7 +28,7 @@
     </span>
     <div class="menu__priceAdd__container">
       <span class="menu__price">{{ pizza.price }}€</span>
-      <div class="menu__add">
+      <div (click)="add(pizza)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     </div>
@@ -45,7 +45,7 @@
     </span>
     <div class="menu__priceAdd__container">
       <span class="menu__price">{{ burger.price }}€</span>
-      <div class="menu__add">
+      <div (click)="add(burger)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     </div>
@@ -62,7 +62,7 @@
     </span>
     <div class="menu__priceAdd__container">
       <span class="menu__price">{{ salat.price }}€</span>
-      <div class="menu__add">
+      <div (click)="add(salat)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     </div>
@@ -80,7 +80,7 @@
   </span>
   <div class="menu__priceAdd__container">
     <span class="menu__price">{{ drinks.price }}€</span>
-    <div class="menu__add">
+    <div (click)="add(drinks)" class="menu__add">
       <i class="fa-solid fa-plus fa-xl"></i>
     </div>
   </div>

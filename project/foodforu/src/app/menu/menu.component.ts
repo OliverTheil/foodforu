@@ -13,4 +13,10 @@ export class MenuComponent implements OnInit {
   constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {}
+
+  add(item: any) {
+    this.items.cart.push(item);
+    console.log(this.items.cart);
+    console.log(this.items.cart.length);
+  }
 }
