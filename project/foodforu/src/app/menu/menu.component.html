@@ -10,7 +10,7 @@
       {{ fav.description }}
     </span>
     <div class="menu__priceAdd__container">
-      <span class="menu__price">{{ fav.price }}€</span>
+      <span class="menu__price">{{ fav.price.toFixed(2) }}&nbsp;€</span>
       <div (click)="add(fav)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
@@ -27,7 +27,7 @@
       {{ pizza.description }}
     </span>
     <div class="menu__priceAdd__container">
-      <span class="menu__price">{{ pizza.price }}€</span>
+      <span class="menu__price">{{ pizza.price.toFixed(2) }}&nbsp;€</span>
       <div (click)="add(pizza)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
@@ -44,7 +44,7 @@
       {{ burger.description }}
     </span>
     <div class="menu__priceAdd__container">
-      <span class="menu__price">{{ burger.price }}€</span>
+      <span class="menu__price">{{ burger.price.toFixed(2) }}&nbsp;€</span>
       <div (click)="add(burger)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
@@ -61,7 +61,7 @@
       {{ salat.description }}
     </span>
     <div class="menu__priceAdd__container">
-      <span class="menu__price">{{ salat.price }}€</span>
+      <span class="menu__price">{{ salat.price.toFixed(2) }}&nbsp;€</span>
       <div (click)="add(salat)" class="menu__add">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
@@ -79,7 +79,7 @@
     {{ drinks.description }}
   </span>
   <div class="menu__priceAdd__container">
-    <span class="menu__price">{{ drinks.price }}€</span>
+    <span class="menu__price">{{ drinks.price.toFixed(2) }}&nbsp;€</span>
     <div (click)="add(drinks)" class="menu__add">
       <i class="fa-solid fa-plus fa-xl"></i>
     </div>

@@ -7,7 +7,25 @@ import { MenuComponent } from './menu/menu.component';
   providedIn: 'root',
 })
 export class CartService {
+  public cartCounter: number = 0;
+  public cartPrice: number = 0;
+  public cart: any = [];
   constructor() {}
+
+  refreshCartCounter() {
+    this.cartCounter = 0;
+    for (let i = 0; i < this.cart.length; i++) {
+      this.cartCounter += this.cart[i]['amount'];
+    }
+    this.calculatePrice();
+  }
+
+  calculatePrice() {
+    this.cartPrice = 0;
+    for (let i = 0; i < this.cart.length; i++) {
+      this.cartPrice += this.cart[i]['price'] * this.cart[i]['amount'];
+    }
+  }
 
   errorMessage(error: string) {
     Swal.fire({

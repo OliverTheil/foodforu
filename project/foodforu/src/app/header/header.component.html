@@ -7,8 +7,8 @@
     [class.navbar__icon--effect]="iconHovered"
     class="fa-solid fa-bag-shopping fa-xl"
   ></i>
-  <div class="amountCircle">
-    {{ this.items.cart.length }}
+  <div *ngIf="this.cartService.cartCounter > 0" class="amountCircle">
+    {{ this.cartService.cartCounter }}
   </div>
 </button>
 <button
@@ -29,8 +29,8 @@
     <a href="#contact">Contact</a>
     <li routerLink="/cart" class="nav__basketIcon">
       <i class="fa-solid fa-bag-shopping fa-xl"></i>
-      <div class="amountCircle">
-        {{ this.items.cart.length }}
+      <div *ngIf="this.cartService.cartCounter > 0" class="amountCircle">
+        {{ this.cartService.cartCounter }}
       </div>
     </li>
   </nav>

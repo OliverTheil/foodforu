@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Items } from '../models/items.class';
+import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,9 @@ import { Items } from '../models/items.class';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  items = new Items();
   iconHovered = false;
   activeText = false;
-  constructor() {}
+  constructor(public cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {}
 

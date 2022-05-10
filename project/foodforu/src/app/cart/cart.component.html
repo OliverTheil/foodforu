@@ -1,15 +1,17 @@
 <section id="cart" class="cart">
   <div class="filler"></div>
   <div
-    *ngFor="let item of this.items.cart; let i = index"
+    *ngFor="let item of cartService.cart; let i = index"
     class="cart__foodBox"
   >
     <div class="cart__amountAndName__container">
-      <span class="cart__number">{{ this.items.cart[i].amount }}x</span>
-      <span class="cart__foodName">{{ this.items.cart[i].name }}</span>
+      <span class="cart__number">{{ cartService.cart[i].amount }}x</span>
+      <span class="cart__foodName">{{ cartService.cart[i].name }}</span>
     </div>
     <div class="minusPlus__container">
-      <span class="cart__price">{{ this.items.cart[i].price }}</span>
+      <span class="cart__price"
+        >{{ cartService.cart[i].price.toFixed(2) }}&nbsp;€</span
+      >
       <div (click)="minus(i)" class="cart__minusAdd">
         <i class="fa-solid fa-minus fa-xl"></i>
       </div>
@@ -20,10 +22,12 @@
   </div>
 
   <div class="cart__payment">
-    <div class="cart--full" *ngIf="items.cart.length > 0">
+    <div class="cart--full" *ngIf="this.cartService.cart.length > 0">
       <div class="cart--full__head">
         <span class="cart--full__priceText">Your total is: </span>
-        <span class="cart--full__price">100 Euro</span>
+        <span class="cart--full__price"
+          >{{ this.cartService.cartPrice.toFixed(2) }} &nbsp;€</span
+        >
       </div>
       <div class="cart--full__discountContainer">
         <span class="margin--tb--64 margin--lr--64"
@@ -32,15 +36,17 @@
         <input type="text" />
       </div>
     </div>
-    <div class="cart--emty" *ngIf="items.cart.length == 0">
+    <div class="cart--emty" *ngIf="this.cartService.cart.length == 0">
       <span class="text">
         Your shopping cart is empty. Click here to go to the menu
       </span>
-      <button><a href="#menu">Menu</a></button>
+      <a href="#menu"><button>Menu</button></a>
     </div>
   </div>
 
   <div class="filler">
-    <button *ngIf="items.cart.length > 0" (click)="orderFood()">Order</button>
+    <button *ngIf="this.cartService.cart.length > 0" (click)="orderFood()">
+      Order
+    </button>
   </div>
 </section>

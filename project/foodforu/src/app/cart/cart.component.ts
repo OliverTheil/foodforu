@@ -10,22 +10,24 @@ import { Items } from '../models/items.class';
 })
 export class CartComponent implements OnInit {
   items = new Items();
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(public cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
 
   plus(i: number) {
-    this.items.cart[i].amount += 1;
+    this.cartService.cart[i].amount += 1;
+    this.cartService.refreshCartCounter();
   }
 
   minus(i: number) {
-    if (this.items.cart[i].amount > 1) {
-      this.items.cart[i].amount -= 1;
+    if (this.cartService.cart[i].amount > 1) {
+      this.cartService.cart[i].amount -= 1;
     } else {
-      console.log(this.items.cart[i]);
+      this.cartService.cart.splice(i, 1);
     }
+    this.cartService.refreshCartCounter();
   }
 
   orderFood() {
