@@ -13,7 +13,10 @@ export class MenuComponent implements OnInit {
   items = new Items();
   constructor(public cartService: CartService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartService.getCart();
+    this.cartService.refreshCartCounter();
+  }
 
   add(item: any) {
     if (this.cartService.cart.length == 0) {

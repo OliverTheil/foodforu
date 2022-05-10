@@ -12,12 +12,28 @@ export class CartService {
   public cart: any = [];
   constructor() {}
 
+  getCart() {
+    if (localStorage.getItem('cart') === null) {
+      let emptyCart = this.cart;
+      localStorage.setItem('cart', JSON.stringify(emptyCart));
+    } else {
+      let existingCart: any = localStorage.getItem('cart');
+      this.cart = JSON.parse(existingCart);
+    }
+  }
+
+  saveCart() {
+    let plan = this.cart;
+    localStorage.setItem('cart', JSON.stringify(plan));
+  }
+
   refreshCartCounter() {
     this.cartCounter = 0;
     for (let i = 0; i < this.cart.length; i++) {
       this.cartCounter += this.cart[i]['amount'];
     }
     this.calculatePrice();
+    this.saveCart();
   }
 
   calculatePrice() {

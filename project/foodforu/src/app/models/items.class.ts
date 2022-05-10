@@ -187,6 +187,4 @@ export class Items {
       foodID: '024',
     },
   ];
-
-  cart: any = [];
 }
