@@ -49,7 +49,7 @@
         <span class="margin--tb--64 margin--lr--64"
           >Do you have a discount code?</span
         >
-        <input id="discount" type="text" />
+        <input (change)="cartService.onChangeEvent($event)" type="text" />
         <div (click)="cartService.calculatePrice()" class="cart__minusAdd">
           <i class="fa-solid fa-check fa-xl"></i>
         </div>

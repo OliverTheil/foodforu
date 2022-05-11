@@ -10,6 +10,7 @@ import { Items } from '../models/items.class';
 })
 export class CartComponent implements OnInit {
   items = new Items();
+  discountCode: any = '';
   constructor(public cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {

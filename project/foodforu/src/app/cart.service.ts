@@ -42,10 +42,13 @@ export class CartService {
     for (let i = 0; i < this.cart.length; i++) {
       this.cartPrice += this.cart[i]['price'] * this.cart[i]['amount'];
     }
-    this.discountCode = this.cart;
     if (this.discountCode == 'ilovecoding') {
       this.cartPrice = this.cartPrice * 0.85;
     }
+  }
+
+  onChangeEvent(event: any) {
+    this.discountCode = event.target.value;
   }
 
   errorMessage(error: string) {
