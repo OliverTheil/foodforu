@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 export class CartService {
   public cartCounter: number = 0;
   public cartPrice: number = 0;
+  public discountCode: string = '';
   public cart: any = [];
   constructor() {}
 
@@ -40,6 +41,10 @@ export class CartService {
     this.cartPrice = 0;
     for (let i = 0; i < this.cart.length; i++) {
       this.cartPrice += this.cart[i]['price'] * this.cart[i]['amount'];
+    }
+    this.discountCode = this.cart;
+    if (this.discountCode == 'ilovecoding') {
+      this.cartPrice = this.cartPrice * 0.85;
     }
   }
 

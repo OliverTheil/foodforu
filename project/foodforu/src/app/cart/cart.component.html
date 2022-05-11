@@ -10,7 +10,9 @@
     </div>
     <div class="minusPlus__container">
       <span class="cart__price"
-        >{{ cartService.cart[i].price.toFixed(2) }}&nbsp;€</span
+        >{{
+          (cartService.cart[i].amount * cartService.cart[i].price).toFixed(2)
+        }}&nbsp;€</span
       >
       <div (click)="minus(i)" class="cart__minusAdd">
         <i class="fa-solid fa-minus fa-xl"></i>
@@ -24,6 +26,20 @@
   <div class="cart__payment">
     <div class="cart--full" *ngIf="this.cartService.cart.length > 0">
       <div class="cart--full__head">
+        <div class="cart--full__deliveryContainer">
+          <span
+            *ngIf="this.cartService.cartPrice > 30"
+            class="margin--lr--64 margin--tb--64"
+            >Nice, you reached 30 €. The delivery is free.
+          </span>
+          <span
+            *ngIf="this.cartService.cartPrice < 30"
+            class="margin--lr--64 margin--tb--64"
+            >Delivery cost is 5.00 €. Delivery is free if your order total
+            exceeds 30 €.
+          </span>
+        </div>
+
         <span class="cart--full__priceText">Your total is: </span>
         <span class="cart--full__price"
           >{{ this.cartService.cartPrice.toFixed(2) }} &nbsp;€</span
@@ -33,7 +49,10 @@
         <span class="margin--tb--64 margin--lr--64"
           >Do you have a discount code?</span
         >
-        <input type="text" />
+        <input id="discount" type="text" />
+        <div (click)="cartService.calculatePrice()" class="cart__minusAdd">
+          <i class="fa-solid fa-check fa-xl"></i>
+        </div>
       </div>
     </div>
     <div class="cart--emty" *ngIf="this.cartService.cart.length == 0">

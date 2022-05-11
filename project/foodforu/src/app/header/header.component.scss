@@ -41,7 +41,8 @@
   top: 10px;
   left: 10px;
   height: 60px;
-  width: 120px;
+  width: fit-content;
+  min-width: 60px;
   padding: 8px;
   background-color: transparent;
   border: none;
@@ -72,6 +73,7 @@
 
 .amountCircle {
   border-radius: 50%;
+  margin-left: 16px;
   border: 2px solid yellowgreen;
   height: 40px;
   width: 40px;
