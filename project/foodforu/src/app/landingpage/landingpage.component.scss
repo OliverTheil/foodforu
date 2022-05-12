@@ -41,18 +41,24 @@
   margin-top: 256px;
   margin-right: 64px;
   border-radius: 48% 52% 76% 24% / 30% 25% 75% 70%;
-  width: 600px;
-  height: 450px;
+  width: 50%;
+  height: 40%;
+  object-fit: cover;
 
   @media (max-width: 1160px) {
+    object-fit: none;
     opacity: 0.2;
     z-index: -1;
     position: absolute;
-    width: 900px;
-    height: 600px;
+    width: 1400px;
+    height: 1200px;
     margin: 0;
-    top: 100px;
+    top: -400px;
     right: 0;
+  }
+
+  @media (max-width: 600px) {
+    top: -200px;
   }
 }
 
