@@ -59,7 +59,7 @@ export class CartService {
       title: error,
       heightAuto: false,
       showConfirmButton: false,
-      timer: 3000,
+      timer: 4000,
     });
   }
 }

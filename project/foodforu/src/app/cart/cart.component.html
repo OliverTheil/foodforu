@@ -1,5 +1,8 @@
 <section id="cart" class="cart">
   <div class="filler"></div>
+  <div *ngIf="this.cartService.cart.length != 0" class="filler">
+    <span class="cart--full__priceText">Your shopping cart:</span>
+  </div>
   <div
     *ngFor="let item of cartService.cart; let i = index"
     class="cart__foodBox"
@@ -29,12 +32,12 @@
         <div class="cart--full__deliveryContainer">
           <span
             *ngIf="this.cartService.cartPrice > 30"
-            class="margin--lr--64 margin--tb--64"
+            class="margin--lr--64 margin--tb--64 textAlign--center"
             >Nice, you reached 30 €. The delivery is free.
           </span>
           <span
             *ngIf="this.cartService.cartPrice < 30"
-            class="margin--lr--64 margin--tb--64"
+            class="margin--lr--64 margin--tb--64 textAlign--center"
             >Delivery cost is 5.00 €. Delivery is free if your order total
             exceeds 30 €.
           </span>
@@ -46,7 +49,7 @@
         >
       </div>
       <div class="cart--full__discountContainer">
-        <span class="margin--tb--64 margin--lr--64"
+        <span class="margin--tb--64 margin--lr--64 textAlign--center"
           >Do you have a discount code?</span
         >
         <input (change)="cartService.onChangeEvent($event)" type="text" />
@@ -56,7 +59,7 @@
       </div>
     </div>
     <div class="cart--emty" *ngIf="this.cartService.cart.length == 0">
-      <span class="text">
+      <span class="text textAlign--center">
         Your shopping cart is empty. Click here to go to the menu
       </span>
       <a href="#menu"><button>Menu</button></a>
@@ -64,7 +67,11 @@
   </div>
 
   <div class="filler">
-    <button *ngIf="this.cartService.cart.length > 0" (click)="orderFood()">
+    <button
+      *ngIf="this.cartService.cart.length > 0"
+      (click)="orderFood()"
+      routerLink=""
+    >
       Order
     </button>
   </div>

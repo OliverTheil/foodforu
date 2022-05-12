@@ -34,6 +34,7 @@ export class CartComponent implements OnInit {
   }
 
   orderFood() {
+    this.cartService.cart = [];
     this.cartService.errorMessage(
       'Sorry, there is no food but i hope you liked my site!'
     );
